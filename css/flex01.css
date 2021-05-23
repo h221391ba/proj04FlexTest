@@ -41,7 +41,6 @@ a, a:link {
 .nav>div {
     height: 60px;
     width: 60px;
-    /* padding: 10px; */
     background-color: var(--minorColor);
     position: relative;
 }
@@ -76,7 +75,7 @@ a, a:link {
     font-size: 16px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
     .nav h1 {
         padding: 0 20px;
         flex-grow: 1;
@@ -114,44 +113,6 @@ a, a:link {
         line-height: 60px;
     }
 }
-@media (min-width: 1024px) {
-    /* .nav h1 {
-        padding: 0 20px;
-        flex-grow: 1;
-    }
-    .nav>div {
-        width: 600px;
-        background-color: transparent;
-        position: static;
-    }
-    .nav>div::before {
-        display: none;
-    }
-    .list {
-        display: flex;
-        justify-content: space-between;
-        width: 600px;
-        position: static;
-        top: unset;
-        right: unset;
-        border-radius: 0;
-    }
-    .list li {
-        padding: 0 20px;
-        border-bottom: none;
-        flex-grow: 1;
-    }
-    .list>li:hover {
-        background-color: var(--minorColor);
-    }
-    .list a {
-        height: 60px;
-        width: auto;
-        text-align: center;
-        padding: 0px;
-        line-height: 60px;
-    } */
-}
 
 .header {
     width: 100%;
@@ -160,12 +121,6 @@ a, a:link {
     background-size: cover;
     position: relative;
 }
-/* .header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-} */
 .header h1 {
     width: 100%;
     padding: 10px 0;
@@ -175,28 +130,9 @@ a, a:link {
     background-color: rgba(0, 0, 0, .5);
     color: white;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header {
-        width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
+    .header { 
         height: 600px;
-        background: url(https://picsum.photos/1200/900) center center no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-    /* .header img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    } */
-    .header h1 {
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, .5);
-        color: white;
     }
 }
 
@@ -227,44 +163,15 @@ a, a:link {
 
 .card img {
     width: 100px;
-    /* margin: 0 auto; */
 }
 .card h2 {
     padding: 20px 0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    .Services {
-        padding: 60px 0 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: grey;
-    }
-    .Services>h2 {
-        padding: 20px 0;
-    }
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
     .flex {
         padding: 0 20px;
         display: flex;
     }
-    .card {
-        margin-bottom: 50px;
-        padding: 40px;
-        background-color: palegreen;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .card img {
-        width: 100px;
-        /* margin: 0 auto; */
-    }
-    .card h2 {
-        padding: 20px 0;
-    }
-
 }
 
 .ourTeams {
@@ -321,30 +228,9 @@ a, a:link {
     max-width: 512px;
     padding: 0px 20px 20px 20px
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    .postfolio {
-        background-color: pink;
-        padding: 60px 0 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
     .postfolio figure {
-        max-width: 512px;
-        margin-bottom: 20px;
-    }
-    .postfolio h2 {
-        padding: 30px 0;
-    }
-    .postfolio img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    .postfolio p {
-        max-width: 512px;
-        padding: 0px 20px 20px 20px
+        order: 1;
     }
 }
 .contactUs {
@@ -357,14 +243,16 @@ a, a:link {
 .contactUs h2 {
     padding: 20px 0;
 }
-.contactUs>.flex {
+.contactUs>.flex2 {
+    max-width: 768px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 iframe {
     width: 320px;
-    height: 320px;
+    height: 250px;
 }
 .contactUs form {
     max-width: 512px;
@@ -375,23 +263,21 @@ iframe {
     align-items: center;
 }
 .contactUs input {
-    height: 30px;
+    height: 40px;
     width: 100%;
     padding: 5px 10px;
     margin: 5px 0;
     border: 3px solid rgb(61, 131, 66);
-    /* border-radius: 10px; */
     background-color: white;
 }
 .contactUs textarea {
-    height: 100px;
+    height: 200px;
     width: 100%;
     margin: 5px 0;
     padding: 5px 10px;
     border: 3px solid rgb(61, 131, 66);
-    /* border-radius: 15px; */
+    resize: none;
     background-color: white;
-
 }
 .contactUs button {
     width: 100px;
@@ -400,62 +286,29 @@ iframe {
     background-color: rgb(61, 131, 66);
     color: white;
 }
-/* @media (min-width: 768px) and (max-width: 1024px) {
-    .contactUs {
-        background-color: plum;
-        padding: 60px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contactUs h2 {
-        padding: 30px 0;
-    }
-    .contactUs>.flex {
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
+    .contactUs>.flex2 {
+        max-width: 1024px;
         display: flex;
         flex-direction: row;
-        align-items: center;
-    }
-    iframe {
-        width: 512px;
-        height: 320px;
+        justify-content: space-between;
+        align-items: unset;
     }
     .contactUs form {
+        padding: 0 30px;
+    }
+    iframe {
         width: 400px;
-        height: 320px;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: 300px;
     }
-    .contactUs input {
-        height: 30px;
-        width: 100%;
-        padding: 5px 10px;
-        margin: 5px 0;
-        border: 3px solid rgb(61, 131, 66); */
-        /* border-radius: 10px; */
-        /* background-color: white;
+}
+@media screen and (min-width: 1024px) {
+    iframe {
+        width: 600px;
+        height: 350px;
     }
-    .contactUs textarea {
-        height: 100px;
-        width: 100%;
-        margin: 5px 0;
-        padding: 5px 10px;
-        border: 3px solid rgb(61, 131, 66); */
-        /* border-radius: 15px; */
-        /* background-color: white;
-    
-    }
-    .contactUs button {
-        width: 100px;
-        height: 30px;
-        margin: 5px 0;
-        background-color: rgb(61, 131, 66);
-        color: white;
-    }
-} */
+}
+
 .footer {
     background-color: rosybrown;
     padding: 20px;
@@ -473,22 +326,12 @@ iframe {
 .footer li {
     font-size: 18px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px), (min-width: 1024px) {
     .footer {
-        background-color: rosybrown;
-        padding: 20px;
-        display: flex;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .footer ul {
-        font-size: 20px;
-        width: 130px;
-        background-color: yellowgreen;
-        padding: 10px;
-        margin: 10px;
-    }
-    .footer li {
-        font-size: 18px;
+        margin: 10px 30px;
     }
 }
